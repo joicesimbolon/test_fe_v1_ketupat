@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+:root {
+  --greenlight: #9bd545;
+  --green: #41a941;
+  --black: #000000;
+}
+
+body {
+  background: rgb(255, 255, 157);
+  position: relative;
+}
+
+#wrapper_text {
+  position: relative;
+  text-align: center;
+  padding-top: 25%;
+  font-family: "Satisfy", cursive;
+  font-weight: bold;
+  font-size: larger;
+  color: var(--black);
+}
+
+#wrapper_ketupat {
+  position: absolute;
+  left: 50%;
+  bottom: 40%;
+}
+.ketupat {
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+}
+
+.ketupat::after {
+  content: "";
+  position: absolute;
+  margin-left: 105%;
+  width: 50px;
+  height: 50px;
+}
+.ketupat::before {
+  content: "";
+  position: absolute;
+  margin-left: -105%;
+  width: 50px;
+  height: 50px;
+}
+
+#line1 {
+  position: relative;
+  margin-top: -75%;
+  margin-left: 25%;
+  background: var(--greenlight);
+}
+#line1::before,
+#line1::after,
+#line3::after,
+#line3::before {
+  background: var(--green);
+}
+
+#line2 {
+  position: relative;
+  margin-left: -50%;
+  margin-top: -25%;
+  background: var(--green);
+}
+#line2::before,
+#line2::after {
+  background: var(--greenlight);
+}
+
+#line3 {
+  position: relative;
+  margin-top: -25%;
+  margin-left: -125%;
+  background: var(--greenlight);
+}
